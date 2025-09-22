@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                   <p className="text-gray-300">
                     Bulevardul Revoluției din 1989 7<br />
                     Timișoara 300054<br />
-                  Timișoara 300054
+                  Timișoara 300054</p>
                 </div>
               </div>
             </div>
