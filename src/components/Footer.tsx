@@ -65,6 +65,13 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-yellow-400">Informații de contact</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
+                <Mail className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300">av.camelialasc@gmail.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">+40 744 669 932</p>
@@ -76,8 +83,7 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-gray-300">
                     Bulevardul Revoluției din 1989 7<br />
-                    Timișoara 300054<br />
-                  Timișoara 300054</p>
+                    Timișoara 300054</p>
                 </div>
               </div>
             </div>
