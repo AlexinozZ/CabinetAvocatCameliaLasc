@@ -60,6 +60,17 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     Timișoara 300054<br />
                     România
                   </p>
+                  <div className="mt-4">
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Bulevardul+Revolu%C8%9Biei+din+1989+7%2C+Timi%C8%99oara+300054"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                    >
+                      <MapPin className="w-5 h-5" />
+                      <span>Vezi pe hartă</span>
+                    </a>
+                  </div>
                 </div>
               </div>
               
@@ -95,30 +106,6 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                     <p>Duminică: Închis</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            {/* Map Placeholder */}
-            <div className="bg-white rounded-xl border-2 border-gray-100 p-8 mt-8">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                  <MapPin className="w-8 h-8 text-gray-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Locația biroului</h4>
-                  <p className="text-gray-600 mb-1">Cabinet Avocat Lasc Camelia Irina</p>
-                  <p className="text-gray-600 mb-1">Bulevardul Revoluției din 1989 7</p>
-                  <p className="text-gray-600 mb-4">Timișoara 300054</p>
-                </div>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Bulevardul+Revolu%C8%9Biei+din+1989+7%2C+Timi%C8%99oara+300054"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-                >
-                  <MapPin className="w-5 h-5" />
-                  <span>Vezi pe hartă</span>
-                </a>
               </div>
             </div>
           </div>
