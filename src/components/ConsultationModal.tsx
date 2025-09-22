@@ -77,7 +77,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
             
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Nume complet (obligatoriu)
+                Nume complet *
               </label>
               <input
                 type="text"
@@ -93,7 +93,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
             
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Telefon (obligatoriu)
+                Telefon *
               </label>
               <input
                 type="tel"
@@ -124,7 +124,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
             
             <div>
               <label htmlFor="legalArea" className="block text-sm font-medium text-gray-700 mb-2">
-                Domeniul Juridic (obligatoriu)
+                Domeniul Juridic *
               </label>
               <select
                 id="legalArea"
@@ -148,9 +148,14 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
 
           {/* Message */}
           <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+              <MessageSquare className="w-5 h-5 mr-2 text-yellow-600" />
+              Detalii Consultație
+            </h3>
+            
             <div>
               <label htmlFor="reason" className="block text-sm font-medium text-gray-700 mb-2">
-                Motiv consultație (obligatoriu)
+                Motiv consultație *
               </label>
               <textarea
                 id="reason"
@@ -160,7 +165,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
                 required
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200 resize-none"
-                placeholder="Vă rugăm să descrieți motivul pentru care solicitați consultația..."
+                placeholder="Ex: divorț, succesiune, contracte, penal, etc."
               />
             </div>
           </div>
@@ -191,7 +196,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
           
           {!isFormValid && (
             <p className="text-sm text-red-500 text-center mt-2">
-              Vă rugăm să completați toate câmpurile obligatorii pentru a trimite cererea.
+              Vă rugăm să completați toate câmpurile marcate cu * pentru a trimite cererea.
             </p>
           )}
         </form>
