@@ -12,7 +12,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export interface Review {
   id: string;
   name: string;
-  role: string;
   content: string;
   rating: number;
   created_at: string;
