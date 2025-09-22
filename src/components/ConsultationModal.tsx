@@ -64,6 +64,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
             <h2 className="text-2xl font-serif font-bold">Programează o Consultație</h2>
           </div>
           <p className="text-gray-300">Completați formularul pentru a programa o întâlnire cu avocatul nostru</p>
+          <p className="text-gray-300">Prin acest formular puteți solicita o programare pentru o consultație</p>
         </div>
 
         {/* Form */}

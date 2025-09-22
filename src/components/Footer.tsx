@@ -11,7 +11,11 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                <Scale className="w-6 h-6 text-black" />
+                <img 
+                  src="/Logo.jpeg" 
+                  alt="Cabinet Avocat Lasc Camelia Irina Logo" 
+                  className="w-10 h-10 object-contain rounded-lg"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-serif font-bold text-yellow-400">

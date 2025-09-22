@@ -47,17 +47,6 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
-                Luați Legătura
-              </h3>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Înțelegem că problemele juridice pot fi complexe și stresante. 
-                Echipa noastră este aici să vă ofere sprijinul și expertiza de care aveți nevoie 
-                pentru a naviga cu succes provocările dumneavoastră juridice.
-              </p>
-            </div>
-            
             {/* Contact Details */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -136,11 +125,6 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
-              Trimiteți-ne un Mesaj
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Nume Complet *
