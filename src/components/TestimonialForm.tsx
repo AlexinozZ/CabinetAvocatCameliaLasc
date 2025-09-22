@@ -12,7 +12,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
   const [formData, setFormData] = useState({
     name: '',
     content: '',
-    rating: 0
+    rating: 5
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredRating, setHoveredRating] = useState(0);
@@ -35,10 +35,6 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (formData.rating === 0) {
-      alert('Vă rugăm să selectați o evaluare.');
-      return;
-    }
 
     setIsSubmitting(true);
     
@@ -69,6 +65,11 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
       setIsSubmitting(false);
     }
   };
+
+  // Check if all required fields are filled
+  const isFormValid = formData.name.trim() !== '' && 
+                     formData.content.trim() !== '' && 
+                     formData.rating > 0;
 
   if (!isOpen) return null;
 
@@ -132,11 +133,9 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
                 </button>
               ))}
             </div>
-            {formData.rating > 0 && (
-              <p className="text-sm text-gray-600 mt-2">
-                Ați selectat {formData.rating} din 5 stele
-              </p>
-            )}
+            <p className="text-sm text-gray-600 mt-2">
+              Ați selectat {formData.rating} din 5 stele
+            </p>
           </div>
 
           {/* Message Field */}
@@ -160,16 +159,22 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
           <div className="flex flex-col space-y-3 pt-4">
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 disabled:from-gray-400 disabled:to-gray-500 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:transform-none disabled:shadow-none flex items-center justify-center space-x-2"
+              disabled={isSubmitting || !isFormValid}
+              className={`w-full font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
+                isFormValid && !isSubmitting
+                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black transform hover:scale-105 hover:shadow-lg'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              }`}
             >
               <Send className="w-5 h-5" />
               <span>{isSubmitting ? 'Se trimite...' : 'Trimite review-ul'}</span>
             </button>
             
-            <p className="text-xs text-gray-500 text-center">
-              Review-ul va fi publicat imediat.
-            </p>
+            {!isFormValid && (
+              <p className="text-xs text-red-500 text-center">
+                Vă rugăm să completați toate câmpurile pentru a trimite review-ul.
+              </p>
+            )}
           </div>
         </form>
       </div>
