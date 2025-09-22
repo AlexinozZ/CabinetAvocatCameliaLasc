@@ -59,24 +59,24 @@ const About: React.FC<AboutProps> = ({ id }) => {
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
                   <Award className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900">Excelență</h3>
-                <p className="text-sm text-gray-600">Angajată la cele mai înalte standarde</p>
+                <h3 className="text-lg font-semibold text-gray-900">Excelență</h3>
+                <p className="text-base text-gray-600">Angajată la cele mai înalte standarde</p>
               </div>
               
               <div className="flex flex-col items-center text-center space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
                   <Shield className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900">Confidențialitate</h3>
-                <p className="text-sm text-gray-600">Intimitatea dumneavoastră este prioritatea noastră</p>
+                <h3 className="text-lg font-semibold text-gray-900">Confidențialitate</h3>
+                <p className="text-base text-gray-600">Intimitatea dumneavoastră este prioritatea noastră</p>
               </div>
               
               <div className="flex flex-col items-center text-center space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
                   <Users className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900">Orientat spre Client</h3>
-                <p className="text-sm text-gray-600">Soluții juridice personalizate</p>
+                <h3 className="text-lg font-semibold text-gray-900">Orientat spre Client</h3>
+                <p className="text-base text-gray-600">Soluții juridice personalizate</p>
               </div>
             </div>
           </div>

@@ -61,24 +61,24 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
             return (
               <div 
                 key={index}
-                className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto">
                   <IconComponent className="w-8 h-8 text-white" />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300">
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
                   {area.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-center">
                   {area.description}
                 </p>
                 
                 {/* Read More Link */}
-                <div className="mt-6">
+                <div className="mt-6 text-center">
                   <span className="text-yellow-600 font-medium hover:text-yellow-700 cursor-pointer inline-flex items-center group/link">
                     Află Mai Multe
                     <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
