@@ -58,11 +58,11 @@ function App() {
   return (
     <div className="min-h-screen">
       <Hero onOpenConsultationModal={openConsultationModal} />
-      <About />
-      <PracticeAreas />
-      <WhyChooseUs onOpenConsultationModal={openConsultationModal} />
-      <Testimonials />
-      <Contact />
+      <About id="about" />
+      <PracticeAreas id="practice-areas" />
+      <WhyChooseUs id="why-choose-us" onOpenConsultationModal={openConsultationModal} />
+      <Testimonials id="testimonials" />
+      <Contact id="contact" />
       <Footer />
       <ConsultationModal 
         isOpen={isConsultationModalOpen} 

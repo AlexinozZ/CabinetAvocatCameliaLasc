@@ -3,6 +3,7 @@ import { Shield, Clock, Target, Star } from 'lucide-react';
 
 interface WhyChooseUsProps {
   onOpenConsultationModal: () => void;
+  id?: string;
 }
 
 const strengths = [
@@ -28,9 +29,9 @@ const strengths = [
   }
 ];
 
-const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultationModal }) => {
+const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultationModal, id }) => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
+    <section id={id} className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400 rounded-full blur-3xl"></div>

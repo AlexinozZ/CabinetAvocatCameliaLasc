@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  id?: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ id }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,7 +30,7 @@ const Contact: React.FC = () => {
   };
   
   return (
-    <section className="py-20 bg-gray-50">
+    <section id={id} className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -63,8 +67,8 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Adresa Cabinetului</h4>
                   <p className="text-gray-600">
-                    Str. Exemplu Nr. 123<br />
-                    Sector 1, București 010101<br />
+                    Bulevardul Revoluției din 1989 7<br />
+                    Timișoara 300054<br />
                     România
                   </p>
                 </div>
@@ -76,7 +80,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Număr de Telefon</h4>
-                  <p className="text-gray-600">+40 21 xxx xxxx</p>
+                  <p className="text-gray-600">+40 744 669 932</p>
                 </div>
               </div>
               
@@ -86,7 +90,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Adresa de Email</h4>
-                  <p className="text-gray-600">office@cabinetlasc.ro</p>
+                  <p className="text-gray-600">av.camelialasc@gmail.com</p>
                 </div>
               </div>
               
@@ -106,11 +110,26 @@ const Contact: React.FC = () => {
             </div>
             
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <p className="font-medium">Integrare Google Maps</p>
-                <p className="text-sm">Harta interactivă va fi plasată aici</p>
+            <div className="bg-white rounded-xl border-2 border-gray-100 p-8">
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
+                  <MapPin className="w-8 h-8 text-gray-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Locația biroului</h4>
+                  <p className="text-gray-600 mb-1">Cabinet Avocat Lasc Camelia Irina</p>
+                  <p className="text-gray-600 mb-1">Bulevardul Revoluției din 1989 7</p>
+                  <p className="text-gray-600 mb-4">Timișoara 300054</p>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Bulevardul+Revolu%C8%9Biei+din+1989+7%2C+Timi%C8%99oara+300054"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
+                  <MapPin className="w-5 h-5" />
+                  <span>Vezi pe hartă</span>
+                </a>
               </div>
             </div>
           </div>

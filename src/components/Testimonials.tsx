@@ -4,7 +4,11 @@ import { ChevronLeft, ChevronRight, Star, Plus } from 'lucide-react';
 import { supabase, type Review } from '../lib/supabase';
 import TestimonialForm from './TestimonialForm';
 
-const Testimonials: React.FC = () => {
+interface TestimonialsProps {
+  id?: string;
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({ id }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,7 +64,7 @@ const Testimonials: React.FC = () => {
   }
   
   return (
-    <section className="py-20 bg-white">
+    <section id={id} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

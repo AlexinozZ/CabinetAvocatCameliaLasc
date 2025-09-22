@@ -1,9 +1,13 @@
 import React from 'react';
 import { Award, Shield, Users } from 'lucide-react';
 
-const About: React.FC = () => {
+interface AboutProps {
+  id?: string;
+}
+
+const About: React.FC<AboutProps> = ({ id }) => {
   return (
-    <section className="py-20 bg-white">
+    <section id={id} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Portrait */}

@@ -23,24 +23,8 @@ const Footer: React.FC = () => {
             
             <p className="text-gray-300 leading-relaxed max-w-md">
               Oferim servicii juridice excepționale cu integritate, dedicare și expertiză. 
-              Partenerul dumneavoastră de încredere pentru toate problemele juridice din România.
+              Partenerul dumneavoastră de încredere pentru toate problemele juridice din Timișoara și România.
             </p>
-            
-            {/* Social Media Links */}
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-yellow-400/10 hover:bg-yellow-400/20 rounded-lg flex items-center justify-center transition-colors duration-300 group"
-              >
-                <Linkedin className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-yellow-400/10 hover:bg-yellow-400/20 rounded-lg flex items-center justify-center transition-colors duration-300 group"
-              >
-                <Facebook className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300" />
-              </a>
-            </div>
           </div>
           
           {/* Quick Links */}
@@ -48,18 +32,18 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-yellow-400">Link-uri Rapide</h4>
             <ul className="space-y-3">
               {[
-                'Despre Noi',
-                'Domenii de Practică', 
-                'De Ce Să Ne Alegeți',
-                'Mărturii',
-                'Contactați-ne'
+                { text: 'Despre Avocat', href: '#about' },
+                { text: 'Domenii de Practică', href: '#practice-areas' }, 
+                { text: 'De Ce Să Ne Alegeți', href: '#why-choose-us' },
+                { text: 'Mărturii', href: '#testimonials' },
+                { text: 'Contactați-ne', href: '#contact' }
               ].map((link, index) => (
                 <li key={index}>
                   <a 
-                    href="#" 
+                    href={link.href} 
                     className="text-gray-300 hover:text-yellow-400 transition-colors duration-200 inline-flex items-center group"
                   >
-                    <span>{link}</span>
+                    <span>{link.text}</span>
                     <svg className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -83,7 +67,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">+40 21 xxx xxxx</p>
+                  <p className="text-gray-300">+40 744 669 932</p>
                 </div>
               </div>
               
@@ -91,9 +75,9 @@ const Footer: React.FC = () => {
                 <Scale className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    Str. Exemplu Nr. 123<br />
-                    Sector 1, București<br />
-                    România
+                    Bulevardul Revoluției din 1989 7<br />
+                    Timișoara 300054<br />
+                    av.camelialasc@gmail.com
                   </p>
                 </div>
               </div>
@@ -107,22 +91,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2025 Cabinet Avocat Lasc Camelia Irina. All rights reserved.
-            </div>
-            
-            <div className="flex space-x-6">
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200"
-              >
-                Politica de Confidențialitate
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-yellow-400 text-sm transition-colors duration-200"
-              >
-                Termeni și Condiții
-              </a>
+              © 2025 Cabinet Avocat Lasc Camelia Irina. Toate drepturile rezervate.
             </div>
           </div>
         </div>
