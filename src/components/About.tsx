@@ -30,7 +30,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
-                Despre <span className="text-yellow-600">Avocat</span>
+                Despre <span className="text-yellow-600">avocat</span>
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
             </div>

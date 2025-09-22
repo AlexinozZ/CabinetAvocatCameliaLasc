@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scale, Linkedin, Facebook, Mail, Phone } from 'lucide-react';
+import { Scale, MapPin, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -29,13 +29,13 @@ const Footer: React.FC = () => {
           
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-yellow-400">Link-uri Rapide</h4>
+            <h4 className="text-lg font-semibold text-yellow-400">Link-uri rapide</h4>
             <ul className="space-y-3">
               {[
-                { text: 'Despre Avocat', href: '#about' },
-                { text: 'Domenii de Practică', href: '#practice-areas' }, 
-                { text: 'De Ce Să Ne Alegeți', href: '#why-choose-us' },
-                { text: 'Mărturii', href: '#testimonials' },
+                { text: 'Despre avocat', href: '#about' },
+                { text: 'Domenii de practică', href: '#practice-areas' }, 
+                { text: 'De ce să ne alegeți', href: '#why-choose-us' },
+                { text: 'Ce spun clienții', href: '#testimonials' },
                 { text: 'Contactați-ne', href: '#contact' }
               ].map((link, index) => (
                 <li key={index}>
@@ -55,15 +55,8 @@ const Footer: React.FC = () => {
           
           {/* Contact Information */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-yellow-400">Informații de Contact</h4>
+            <h4 className="text-lg font-semibold text-yellow-400">Informații de contact</h4>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">office@cabinetlasc.ro</p>
-                </div>
-              </div>
-              
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                 <div>
@@ -72,7 +65,7 @@ const Footer: React.FC = () => {
               </div>
               
               <div className="flex items-start space-x-3">
-                <Scale className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
                     Bulevardul Revoluției din 1989 7<br />

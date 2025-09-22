@@ -42,7 +42,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultationModal, id }
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold mb-4">
-            De Ce să Alegeți <span className="text-yellow-400">Cabinetul Nostru</span>
+            De ce să alegeți <span className="text-yellow-400">cabinetul nostru</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

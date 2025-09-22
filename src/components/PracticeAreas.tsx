@@ -45,7 +45,7 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
-            Domenii de <span className="text-yellow-600">Practică</span>
+            Domenii de <span className="text-yellow-600">practică</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
