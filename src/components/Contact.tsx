@@ -125,6 +125,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
           
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Nume Complet *
@@ -195,6 +196,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 <Send className="w-5 h-5" />
                 <span>Trimite Mesajul</span>
               </button>
+            </form>
             </form>
           </div>
         </div>
