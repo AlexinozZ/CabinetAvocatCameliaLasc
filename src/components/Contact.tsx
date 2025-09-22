@@ -110,13 +110,10 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Contact;
+          
+          <div className="mt-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="flex flex-col items-center space-y-3 p-4">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-yellow-600" />
                 </div>
