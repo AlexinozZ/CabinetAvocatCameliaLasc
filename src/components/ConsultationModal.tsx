@@ -9,12 +9,10 @@ interface ConsultationModalProps {
 const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
-    preferredDate: '',
-    preferredTime: '',
+    email: '',
     legalArea: '',
-    message: ''
+    reason: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -31,15 +29,19 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
     alert('Mulțumim! Cererea dumneavoastră a fost trimisă. Vă vom contacta în cel mai scurt timp pentru confirmarea programării.');
     setFormData({
       name: '',
-      email: '',
       phone: '',
-      preferredDate: '',
-      preferredTime: '',
+      email: '',
       legalArea: '',
-      message: ''
+      reason: ''
     });
     onClose();
   };
+
+  // Check if all required fields are filled
+  const isFormValid = formData.name.trim() !== '' && 
+                     formData.phone.trim() !== '' && 
+                     formData.legalArea !== '' && 
+                     formData.reason.trim() !== '';
 
   if (!isOpen) return null;
 
@@ -73,43 +75,25 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
               Informații Personale
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nume Complet *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
-                  placeholder="Introduceți numele complet"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
-                  placeholder="exemplu@email.com"
-                />
-              </div>
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Nume complet (obligatoriu)
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
+                placeholder="Introduceți numele complet"
+              />
             </div>
             
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Telefon *
+                Telefon (obligatoriu)
               </label>
               <input
                 type="tel"
@@ -122,60 +106,25 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
                 placeholder="+40 xxx xxx xxx"
               />
             </div>
-          </div>
 
-          {/* Appointment Details */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-              <Clock className="w-5 h-5 mr-2 text-yellow-600" />
-              Detalii Programare
-            </h3>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">
-                  Data Preferată *
-                </label>
-                <input
-                  type="date"
-                  id="preferredDate"
-                  name="preferredDate"
-                  value={formData.preferredDate}
-                  onChange={handleInputChange}
-                  required
-                  min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
-                  Ora Preferată *
-                </label>
-                <select
-                  id="preferredTime"
-                  name="preferredTime"
-                  value={formData.preferredTime}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
-                >
-                  <option value="">Selectați ora</option>
-                  <option value="09:00">09:00</option>
-                  <option value="10:00">10:00</option>
-                  <option value="11:00">11:00</option>
-                  <option value="12:00">12:00</option>
-                  <option value="14:00">14:00</option>
-                  <option value="15:00">15:00</option>
-                  <option value="16:00">16:00</option>
-                  <option value="17:00">17:00</option>
-                </select>
-              </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email (opțional)
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200"
+                placeholder="exemplu@email.com"
+              />
             </div>
             
             <div>
               <label htmlFor="legalArea" className="block text-sm font-medium text-gray-700 mb-2">
-                Domeniul Juridic *
+                Domeniul Juridic (obligatoriu)
               </label>
               <select
                 id="legalArea"
@@ -199,24 +148,19 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
 
           {/* Message */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-              <MessageSquare className="w-5 h-5 mr-2 text-yellow-600" />
-              Detalii Caz
-            </h3>
-            
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Descrierea Problemei *
+              <label htmlFor="reason" className="block text-sm font-medium text-gray-700 mb-2">
+                Motiv consultație (obligatoriu)
               </label>
               <textarea
-                id="message"
-                name="message"
-                value={formData.message}
+                id="reason"
+                name="reason"
+                value={formData.reason}
                 onChange={handleInputChange}
                 required
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors duration-200 resize-none"
-                placeholder="Vă rugăm să descrieți pe scurt problema juridică pentru care solicitați consultația..."
+                placeholder="Vă rugăm să descrieți motivul pentru care solicitați consultația..."
               />
             </div>
           </div>
@@ -225,7 +169,12 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+              disabled={!isFormValid}
+              className={`flex-1 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
+                isFormValid
+                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black transform hover:scale-105 hover:shadow-lg'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              }`}
             >
               <Calendar className="w-5 h-5" />
               <span>Trimite Cererea</span>
@@ -239,6 +188,12 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
               Anulează
             </button>
           </div>
+          
+          {!isFormValid && (
+            <p className="text-sm text-red-500 text-center mt-2">
+              Vă rugăm să completați toate câmpurile obligatorii pentru a trimite cererea.
+            </p>
+          )}
         </form>
       </div>
     </div>
