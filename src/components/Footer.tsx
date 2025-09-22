@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scale, MapPin, Phone } from 'lucide-react';
+import { Scale, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -18,6 +18,13 @@ const Footer: React.FC = () => {
                   Cabinet Avocat
                 </h3>
                 <p className="text-yellow-400">Lasc Camelia Irina</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <Mail className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-gray-300">av.camelialasc@gmail.com</p>
               </div>
             </div>
             
@@ -70,8 +77,7 @@ const Footer: React.FC = () => {
                   <p className="text-gray-300">
                     Bulevardul Revoluției din 1989 7<br />
                     Timișoara 300054<br />
-                    av.camelialasc@gmail.com
-                  </p>
+                  Timișoara 300054
                 </div>
               </div>
             </div>
