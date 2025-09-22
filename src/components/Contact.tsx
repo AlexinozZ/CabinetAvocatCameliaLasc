@@ -197,7 +197,6 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
                 <span>Trimite Mesajul</span>
               </button>
             </form>
-            </form>
           </div>
         </div>
       </div>
