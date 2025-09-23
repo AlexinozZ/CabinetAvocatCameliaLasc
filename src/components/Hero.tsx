@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           
           {/* Main Headline */}
           <div className="space-y-2">
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mt-2">
               Servicii juridice profesionale cu integritate și dedicare.
             </p>
           </div>
