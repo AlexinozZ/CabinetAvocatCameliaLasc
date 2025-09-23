@@ -35,8 +35,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           
           {/* Description */}
           <div className="space-y-4 sm:space-y-6 px-4">
-            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Servicii juridice profesionale cu integritate și dedicare.
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed italic">
+              - Succesul tău, pasiunea noastră -
             </p>
             
             {/* Buttons */}
