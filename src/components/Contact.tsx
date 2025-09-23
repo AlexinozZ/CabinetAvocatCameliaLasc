@@ -112,7 +112,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
             </div>
           </div>
           
-          <div className="mt-16">
+        </div>
       </div>
     </section>
   );
