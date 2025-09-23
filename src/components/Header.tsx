@@ -66,10 +66,10 @@ const Header: React.FC = () => {
           >
             {isMenuOpen ? (
               <X className="w-6 h-6 text-gray-900" />
-            ) : (
+            <h1 className="text-base font-serif font-bold text-black mr-2">
               <Menu className="w-6 h-6 text-gray-900" />
             )}
-            <p className="text-xs text-gray-600 italic ml-2">
+            <p className="text-xs text-gray-600 italic">
               Succesul tău, pasiunea noastră
             </p>
           </button>
