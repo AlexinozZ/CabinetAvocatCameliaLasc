@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             </div>
             <div className="flex items-center">
               <h1 className="text-base font-serif font-bold text-black">
-                Camelia Lasc <span className="text-yellow-600 mx-2">|</span> Cabinet Avocat
+                Camelia Lasc <span className="text-yellow-600 mx-1">|</span> Cabinet Avocat
               </h1>
             </div>
           </div>
