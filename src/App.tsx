@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import PracticeAreas from './components/PracticeAreas';
@@ -57,6 +58,7 @@ function App() {
   
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero onOpenConsultationModal={openConsultationModal} />
       <About id="about" />
       <PracticeAreas id="practice-areas" />
