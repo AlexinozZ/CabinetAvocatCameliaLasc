@@ -23,13 +23,6 @@ const Testimonials: React.FC<TestimonialsProps> = ({ id }) => {
     try {
       setLoading(true);
       
-      // Check if Supabase is properly configured
-      if (!supabaseUrl || !supabaseAnonKey) {
-        console.warn('Supabase not configured, using fallback testimonials');
-        setTestimonials([]);
-        return;
-      }
-      
       const { data, error } = await supabase
         .from('reviews')
         .select('*')

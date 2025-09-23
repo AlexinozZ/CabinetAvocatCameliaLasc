@@ -35,12 +35,6 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Check if Supabase is available
-    if (!supabaseUrl || !supabaseAnonKey) {
-      alert('Funcționalitatea de review-uri nu este disponibilă momentan.');
-      return;
-    }
-
     setIsSubmitting(true);
     
     try {
