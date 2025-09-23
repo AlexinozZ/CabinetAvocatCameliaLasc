@@ -6,6 +6,13 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
       {/* Background Pattern */}
@@ -50,7 +57,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
               </span>
             </button>
             
-            <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+            <button 
+              onClick={scrollToAbout}
+              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
               Află Mai Multe
             </button>
           </div>

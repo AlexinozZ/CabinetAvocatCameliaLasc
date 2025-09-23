@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Users, Heart, Gavel, Home, Briefcase } from 'lucide-react';
+import { Building2, Users, Heart, Gavel, Home, Briefcase, FileText, DollarSign, Car, Hammer, FileCheck } from 'lucide-react';
 
 const practiceAreas = [
   {
@@ -31,6 +31,31 @@ const practiceAreas = [
     icon: Users,
     title: 'Drept Muncii',
     description: 'Probleme de dreptul muncii, dispute la locul de muncă și negocieri de contracte de muncă pentru angajatori și angajați.'
+  },
+  {
+    icon: FileText,
+    title: 'Drept Contravențional',
+    description: 'Reprezentare în cazuri contravenționale și apărarea drepturilor în fața autorităților administrative.'
+  },
+  {
+    icon: DollarSign,
+    title: 'Drept Administrativ și Fiscal',
+    description: 'Consultanță și reprezentare în probleme administrative și fiscale, inclusiv dispute cu autoritățile publice.'
+  },
+  {
+    icon: Car,
+    title: 'Despăgubiri din Accidente',
+    description: 'Recuperarea despăgubirilor pentru accidente de muncă, auto și alte prejudicii suferite.'
+  },
+  {
+    icon: Hammer,
+    title: 'Executare Silită',
+    description: 'Proceduri de executare silită și recuperarea creanțelor prin mijloace legale eficiente.'
+  },
+  {
+    icon: FileCheck,
+    title: 'Contracte și Creanțe',
+    description: 'Redactarea contractelor, verificarea clauzelor și recuperarea creanțelor comerciale și civile.'
   }
 ];
 
@@ -76,16 +101,6 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
                 <p className="text-gray-600 leading-relaxed text-center">
                   {area.description}
                 </p>
-                
-                {/* Read More Link */}
-                <div className="mt-6 text-center">
-                  <span className="text-yellow-600 font-medium hover:text-yellow-700 cursor-pointer inline-flex items-center group/link">
-                    Află Mai Multe
-                    <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </div>
               </div>
             );
           })}

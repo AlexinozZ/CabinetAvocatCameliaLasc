@@ -14,7 +14,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/5668774/pexels-photo-5668774.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/Poza_Avocat.jpeg"
                 alt="Lasc Camelia Irina - Professional Lawyer"
                 className="w-full h-96 sm:h-[500px] object-cover object-center"
               />
@@ -37,8 +37,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
             
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p className="text-lg">
-                <strong className="text-gray-900">Lasc Camelia Irina</strong> brings over a decade of dedicated legal expertise 
-                aduce peste un deceniu de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
+                <strong className="text-gray-900">Lasc Camelia Irina</strong> aduce peste un deceniu de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
               </p>
               
               <p>
