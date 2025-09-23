@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Calendar, Clock, User, Mail, Phone, MessageSquare } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
     legalArea: '',
     reason: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -23,18 +25,48 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Consultation request:', formData);
-    alert('Mulțumim! Cererea dumneavoastră a fost trimisă. Vă vom contacta în cel mai scurt timp pentru confirmarea programării.');
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      legalArea: '',
-      reason: ''
-    });
-    onClose();
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Prepare template parameters matching EmailJS template
+      const templateParams = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email || 'Nu a fost specificat',
+        reason: formData.reason,
+        title: `Cerere consultație - ${formData.legalArea}`,
+        time: new Date().toLocaleString('ro-RO')
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_84g7n1f', // Service ID
+        'template_xiseikc', // Template ID
+        templateParams,
+        'hRYJMFUiibv1G4o_P' // Public Key
+      );
+
+      alert('Mulțumim! Cererea dumneavoastră a fost trimisă cu succes. Vă vom contacta în cel mai scurt timp pentru confirmarea programării.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        legalArea: '',
+        reason: ''
+      });
+      
+      onClose();
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('A apărut o eroare la trimiterea cererii. Vă rugăm să încercați din nou sau să ne contactați direct la telefon.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Check if all required fields are filled
@@ -174,15 +206,15 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <button
               type="submit"
-              disabled={!isFormValid}
+              disabled={!isFormValid || isSubmitting}
               className={`flex-1 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
-                isFormValid
+                isFormValid && !isSubmitting
                   ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black transform hover:scale-105 hover:shadow-lg'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
               }`}
             >
               <Calendar className="w-5 h-5" />
-              <span>Trimite Cererea</span>
+              <span>{isSubmitting ? 'Se trimite...' : 'Trimite Cererea'}</span>
             </button>
             
             <button
@@ -194,7 +226,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
             </button>
           </div>
           
-          {!isFormValid && (
+          {!isFormValid && !isSubmitting && (
             <p className="text-sm text-red-500 text-center mt-2">
               Vă rugăm să completați toate câmpurile marcate cu * pentru a trimite cererea.
             </p>
