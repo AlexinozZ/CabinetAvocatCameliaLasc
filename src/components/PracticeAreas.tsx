@@ -29,7 +29,7 @@ const practiceAreas = [
   },
   {
     icon: Users,
-    title: 'Drept Muncii',
+    title: 'Dreptul Muncii',
     description: 'Probleme de dreptul muncii, dispute la locul de muncă și negocieri de contracte de muncă pentru angajatori și angajați.'
   },
   {
@@ -80,33 +80,31 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
         </div>
         
         {/* Practice Areas Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {practiceAreas.map((area, index) => {
             const IconComponent = area.icon;
             
-            // Add empty div before "Contracte și Creanțe" to push it to the right
+            // Position "Contracte și Creanțe" on the right side of the last row
             if (area.title === 'Contracte și Creanțe') {
               return (
-                <React.Fragment key={index}>
-                  <div className="hidden lg:block"></div>
-                  <div 
-                    className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center"
-                  >
-                    {/* Icon */}
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    {/* Content */}
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
-                      {area.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 leading-relaxed text-center">
-                      {area.description}
-                    </p>
+                <div 
+                  className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center lg:col-start-3"
+                  key={index}
+                >
+                  {/* Icon */}
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                </React.Fragment>
+                  
+                  {/* Content */}
+                  <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
+                    {area.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed text-center">
+                    {area.description}
+                  </p>
+                </div>
               );
             }
             
