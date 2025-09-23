@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
           
           {/* Content */}
           <div className="space-y-8">
-            <div>
+            <div className="text-center">
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
                 Despre <span className="text-yellow-600">avocat</span>
               </h2>
