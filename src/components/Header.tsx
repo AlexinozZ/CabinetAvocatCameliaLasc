@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     { label: 'Despre', href: '#about' },
     { label: 'Servicii', href: '#practice-areas' },
     { label: 'De ce noi', href: '#why-choose-us' },
-    { label: 'Testimoniale', href: '#testimonials' },
+    { label: 'Recenzii', href: '#testimonials' },
     { label: 'Contact', href: '#contact' }
   ];
 
