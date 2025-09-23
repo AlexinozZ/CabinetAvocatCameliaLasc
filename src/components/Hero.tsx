@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           {/* Logo Placeholder */}
           <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full mb-6">
             <img 
-              src="/Logo.jpeg" 
+              src="/Logo2.jpeg" 
               alt="Cabinet Avocat Lasc Camelia Irina Logo" 
               className="w-16 h-16 object-contain rounded-full"
             />

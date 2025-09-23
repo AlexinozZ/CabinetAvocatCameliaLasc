@@ -14,7 +14,7 @@ const practiceAreas = [
   },
   {
     icon: Heart,
-    title: 'Drept de Familie',
+    title: 'Dreptul Familiei',
     description: 'Gestionarea sensibilă a problemelor de familie, inclusiv divorț, custodie, adopție și relații domestice cu compasiune.'
   },
   {
