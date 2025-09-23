@@ -26,25 +26,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Main Logo */}
           <div className="mb-6">
-            <div className="flex justify-center">
-              <img 
-                src="/lc-symbol.svg" 
-                alt="LC - Cabinet Avocat Lasc Camelia Irina" 
-                className="w-48 h-32 sm:w-64 sm:h-40 object-contain"
-              />
-            </div>
-          </div>
-          
-          {/* Main Headline */}
-          <div className="space-y-2">
-          </div>
-          
-          {/* LC Symbol */}
-          <div className="mb-6">
             <img 
-              src="/lc-symbol-only.svg" 
-              alt="LC Symbol with Justice Scale" 
-              className="w-24 h-16 sm:w-32 sm:h-20 object-contain mx-auto"
+              src="/main-logo.jpeg" 
+              alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
+              className="w-80 h-60 sm:w-96 sm:h-72 object-contain mx-auto"
             />
           </div>
           
