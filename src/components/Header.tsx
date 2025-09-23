@@ -69,6 +69,9 @@ const Header: React.FC = () => {
             ) : (
               <Menu className="w-6 h-6 text-gray-900" />
             )}
+            <p className="text-xs text-gray-600 italic ml-2">
+              Succesul tău, pasiunea noastră
+            </p>
           </button>
         </div>
 
