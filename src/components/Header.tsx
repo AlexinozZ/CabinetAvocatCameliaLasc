@@ -38,9 +38,9 @@ const Header: React.FC = () => {
                 className="w-8 h-8 object-contain rounded-full"
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="flex items-center">
               <h1 className="text-lg font-serif font-bold text-gray-900">
-                <span className="text-black">Camelia Lasc</span> <span className="text-yellow-600">|</span> <span className="text-black">Cabinet Avocat</span>
+                Camelia Lasc <span className="text-yellow-600 mx-2">|</span> Cabinet Avocat
               </h1>
             </div>
           </div>
