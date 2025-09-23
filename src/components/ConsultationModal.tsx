@@ -137,10 +137,10 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
                 <option value="">Selectați domeniul</option>
                 <option value="civil">Drept Civil</option>
                 <option value="commercial">Drept Comercial</option>
-                <option value="family">Drept de Familie</option>
+                <option value="family">Dreptul Familiei</option>
                 <option value="criminal">Drept Penal</option>
                 <option value="real-estate">Imobiliare</option>
-                <option value="labor">Drept Muncii</option>
+                <option value="labor">Dreptul Muncii</option>
                 <option value="other">Altul</option>
               </select>
             </div>
