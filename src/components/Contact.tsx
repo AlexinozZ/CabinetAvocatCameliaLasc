@@ -119,5 +119,3 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
 };
 
 export default Contact;
-  )
-}
