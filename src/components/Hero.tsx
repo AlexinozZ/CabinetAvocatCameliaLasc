@@ -39,6 +39,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           <div className="space-y-2">
           </div>
           
+          {/* LC Symbol */}
+          <div className="mb-6">
+            <img 
+              src="/lc-symbol-only.svg" 
+              alt="LC Symbol with Justice Scale" 
+              className="w-24 h-16 sm:w-32 sm:h-20 object-contain mx-auto"
+            />
+          </div>
+          
           {/* Call to Action */}
           <div className="space-y-6">
             <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
