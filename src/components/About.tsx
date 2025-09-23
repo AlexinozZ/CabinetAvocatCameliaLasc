@@ -27,17 +27,17 @@ const About: React.FC<AboutProps> = ({ id }) => {
           </div>
           
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-right">
             <div>
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
                 Despre <span className="text-yellow-600">avocat</span>
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full ml-auto"></div>
             </div>
             
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p className="text-lg">
-                <strong className="text-gray-900">Lasc Camelia Irina</strong> aduce peste un deceniu de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
+                <strong className="text-gray-900">Lasc Camelia Irina</strong> aduce peste două decenii de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
               </p>
               
               <p>
@@ -74,7 +74,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
                   <Users className="w-6 h-6 text-yellow-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">Orientat spre Client</h3>
+                <h3 className="text-lg font-semibold text-gray-900">Orientare spre Client</h3>
                 <p className="text-base text-gray-600">Soluții juridice personalizate</p>
               </div>
             </div>

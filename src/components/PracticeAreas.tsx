@@ -4,58 +4,43 @@ import { Building2, Users, Heart, Gavel, Home, Briefcase, FileText, DollarSign, 
 const practiceAreas = [
   {
     icon: Building2,
-    title: 'Drept Civil',
-    description: 'Servicii complete de litigii civile și rezolvare a disputelor cu expertiză în dreptul contractelor și cazuri de vătămare corporală.'
+    title: 'Drept Civil'
   },
   {
     icon: Briefcase,
-    title: 'Drept Comercial',
-    description: 'Înființarea afacerilor, contracte comerciale și conformitatea corporativă pentru a ajuta afacerea dumneavoastră să prospere pe piața României.'
+    title: 'Drept Comercial'
   },
   {
     icon: Heart,
-    title: 'Dreptul Familiei',
-    description: 'Gestionarea sensibilă a problemelor de familie, inclusiv divorț, custodie, adopție și relații domestice cu compasiune.'
+    title: 'Dreptul Familiei'
   },
   {
     icon: Gavel,
-    title: 'Drept Penal',
-    description: 'Reprezentare agresivă în apărarea penală cu experiență vastă în sistemul de justiție penală românesc.'
+    title: 'Drept Penal'
   },
   {
     icon: Home,
-    title: 'Imobiliare',
-    description: 'Tranzacții imobiliare, dispute imobiliare și probleme de zonare cu due diligence amănunțit și protecție juridică.'
+    title: 'Imobiliare'
   },
   {
     icon: Users,
-    title: 'Dreptul Muncii',
-    description: 'Probleme de dreptul muncii, dispute la locul de muncă și negocieri de contracte de muncă pentru angajatori și angajați.'
+    title: 'Dreptul Muncii'
   },
   {
     icon: FileText,
-    title: 'Drept Contravențional',
-    description: 'Reprezentare în cazuri contravenționale și apărarea drepturilor în fața autorităților administrative.'
-  },
-  {
-    icon: DollarSign,
-    title: 'Drept Administrativ și Fiscal',
-    description: 'Consultanță și reprezentare în probleme administrative și fiscale, inclusiv dispute cu autoritățile publice.'
+    title: 'Drept Contravențional'
   },
   {
     icon: Car,
-    title: 'Despăgubiri din Accidente',
-    description: 'Recuperarea despăgubirilor pentru accidente de muncă, auto și alte prejudicii suferite.'
+    title: 'Despăgubiri din Accidente'
   },
   {
     icon: Hammer,
-    title: 'Executare Silită',
-    description: 'Proceduri de executare silită și recuperarea creanțelor prin mijloace legale eficiente.'
+    title: 'Executare Silită'
   },
   {
     icon: FileCheck,
-    title: 'Contracte și Creanțe',
-    description: 'Redactarea contractelor, verificarea clauzelor și recuperarea creanțelor comerciale și civile.'
+    title: 'Contracte și Creanțe'
   }
 ];
 
@@ -100,10 +85,6 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
                   <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
                     {area.title}
                   </h3>
-                  
-                  <p className="text-gray-600 leading-relaxed text-center">
-                    {area.description}
-                  </p>
                 </div>
               );
             }
@@ -122,10 +103,6 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
                 <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
                   {area.title}
                 </h3>
-                
-                <p className="text-gray-600 leading-relaxed text-center">
-                  {area.description}
-                </p>
               </div>
             );
           })}

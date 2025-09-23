@@ -15,7 +15,7 @@ const strengths = [
   {
     icon: Clock,
     title: 'Experiență',
-    description: 'Peste un deceniu de practică juridică de succes cu înțelegere profundă a legii și procedurilor românești.'
+    description: 'Peste două decenii de practică juridică de succes cu înțelegere profundă a legii și procedurilor românești.'
   },
   {
     icon: Target,

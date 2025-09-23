@@ -34,7 +34,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4 flex items-center justify-center">
             <span className="text-yellow-600">Contactați-ne</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
@@ -106,8 +106,7 @@ const Contact: React.FC<ContactProps> = ({ id }) => {
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Program de Lucru</h4>
               <div className="text-gray-600 space-y-1">
                 <p>Luni - Vineri: 9:00 - 18:00</p>
-                <p>Sâmbătă: 9:00 - 13:00</p>
-                <p>Duminică: Închis</p>
+                <p>Sâmbătă - Duminică: Închis</p>
               </div>
             </div>
           </div>
