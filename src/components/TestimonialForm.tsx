@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Send, X } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import ThankYouModal from './ThankYouModal';
 
 interface TestimonialFormProps {
   isOpen: boolean;
@@ -16,6 +17,8 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredRating, setHoveredRating] = useState(0);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [submittedData, setSubmittedData] = useState({ name: '', rating: 0 });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -45,7 +48,7 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
             name: formData.name,
             content: formData.content,
             rating: formData.rating,
-            is_active: false // Will be reviewed before being made active
+            is_active: true // Published immediately
           }
         ]);
 
@@ -53,16 +56,22 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
         throw error;
       }
 
-      alert('Mulțumim pentru review! Va fi publicat după verificare.');
+      // Store submitted data for thank you modal
+      setSubmittedData({ name: formData.name, rating: formData.rating });
       setFormData({ name: '', content: '', rating: 0 });
       onSuccess();
-      onClose();
+      setShowThankYou(true);
     } catch (error) {
       console.error('Error submitting testimonial:', error);
       alert('A apărut o eroare. Vă rugăm să încercați din nou.');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleThankYouClose = () => {
+    setShowThankYou(false);
+    onClose();
   };
 
   // Check if all required fields are filled
@@ -177,6 +186,14 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ isOpen, onClose, onSu
           </div>
         </form>
       </div>
+      
+      {/* Thank You Modal */}
+      <ThankYouModal 
+        isOpen={showThankYou}
+        onClose={handleThankYouClose}
+        reviewerName={submittedData.name}
+        rating={submittedData.rating}
+      />
     </div>
   );
 };
