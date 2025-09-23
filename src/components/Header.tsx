@@ -39,7 +39,7 @@ const Header: React.FC = () => {
               />
             </div>
             <div className="flex items-center">
-              <h1 className="text-lg font-serif font-bold text-gray-900">
+              <h1 className="text-base font-serif font-bold text-black">
                 Camelia Lasc <span className="text-yellow-600 mx-2">|</span> Cabinet Avocat
               </h1>
             </div>

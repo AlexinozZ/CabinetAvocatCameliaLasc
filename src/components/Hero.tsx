@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           {/* Main Logo */}
           <div className="mb-6">
             <img 
-              src="/Logo2 copy.jpeg" 
+              src="/Logo2 copy copy.jpeg" 
               alt="Cabinet Avocat Lasc Camelia Irina Logo" 
               className="w-64 h-64 sm:w-80 sm:h-80 object-contain"
             />
