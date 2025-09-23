@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden pt-16">
+    <section id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden pt-16 px-4 sm:px-6 lg:px-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent"></div>
@@ -22,27 +22,27 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="relative max-w-7xl mx-auto pt-12 sm:pt-20 pb-16">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Main Logo */}
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <img 
               src="/main-logo.jpeg" 
               alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
-              className="w-80 h-60 sm:w-96 sm:h-72 object-contain mx-auto"
+              className="w-72 h-54 sm:w-80 sm:h-60 md:w-96 md:h-72 object-contain mx-auto max-w-full"
             />
           </div>
           
           {/* Call to Action */}
-          <div className="space-y-6">
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <div className="space-y-4 sm:space-y-6 px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Servicii juridice profesionale cu integritate și dedicare.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 px-4 sm:px-0">
             <button 
               onClick={onOpenConsultationModal}
-              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl w-full sm:w-auto"
             >
               <span className="flex items-center justify-center gap-2">
                 Programează o Consultație
@@ -53,13 +53,13 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
             <div className="relative">
               <button 
                 onClick={scrollToAbout}
-                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 w-full sm:w-auto"
               >
                 Află Mai Multe
               </button>
               
               {/* Scroll Indicator attached directly to this button */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 hidden sm:block">
                 <div className="w-6 h-10 border-2 border-yellow-400/50 rounded-full flex justify-center">
                   <div className="w-1 h-3 bg-yellow-400 rounded-full mt-2 animate-bounce"></div>
                 </div>
