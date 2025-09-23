@@ -15,6 +15,16 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
 
   return (
     <section id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden pt-16">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/Fundal.jpeg" 
+          alt="Cabinet Background" 
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-black/70 to-gray-800/80"></div>
+      </div>
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent"></div>

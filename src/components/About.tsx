@@ -14,7 +14,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/Poza_Avocat copy.jpeg"
+                src="/Despre_avocat.jpeg"
                 alt="Lasc Camelia Irina - Professional Lawyer"
                 className="w-full h-96 sm:h-[500px] object-cover object-center"
               />
