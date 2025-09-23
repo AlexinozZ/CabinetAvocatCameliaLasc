@@ -12,22 +12,12 @@ const About: React.FC<AboutProps> = ({ id }) => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Portrait */}
           <div className="relative space-y-6">
-            {/* First Image */}
+            {/* Office Image */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/Despre_avocat.jpeg"
-                alt="Lasc Camelia Irina - Professional Lawyer"
-                className="w-full h-64 sm:h-80 object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-            
-            {/* Second Image */}
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img
-                src="/WhatsApp Image 2025-09-23 at 16.10.43.jpeg"
-                alt="Cabinet Interior - Professional Office"
-                className="w-full h-64 sm:h-80 object-cover object-center"
+                src="/Fundal copy.jpeg"
+                alt="Cabinet Avocat Lasc Camelia Irina - Interior Elegant"
+                className="w-full h-96 sm:h-[500px] object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
