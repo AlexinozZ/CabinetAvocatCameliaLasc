@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           alt="Cabinet Background" 
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-black/20 to-gray-800/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-black/5 to-gray-800/10"></div>
       </div>
       
       {/* Background Pattern */}
@@ -37,9 +37,9 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           {/* Main Logo */}
           <div className="mb-4 sm:mb-6">
             <img 
-              src="/logo-main.png" 
+              src="/Logo2.jpeg" 
               alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
-              className="w-72 h-54 sm:w-80 sm:h-60 md:w-96 md:h-72 object-contain mx-auto max-w-full"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain mx-auto max-w-full rounded-full"
             />
           </div>
           
