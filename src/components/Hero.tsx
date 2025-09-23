@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           {/* Main Logo */}
           <div className="mb-4 sm:mb-6">
             <img 
-              src="/image.png" 
+              src="/logo-main.png" 
               alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
               className="w-72 h-54 sm:w-80 sm:h-60 md:w-96 md:h-72 object-contain mx-auto max-w-full"
             />
