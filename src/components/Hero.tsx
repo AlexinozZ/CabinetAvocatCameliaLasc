@@ -37,13 +37,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           
           {/* Main Headline */}
           <div className="space-y-2">
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mt-2">
-              Servicii juridice profesionale cu integritate și dedicare.
-            </p>
           </div>
           
           {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-8">
+          <div className="space-y-6">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Servicii juridice profesionale cu integritate și dedicare.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
             <button 
               onClick={onOpenConsultationModal}
               className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
@@ -69,6 +71,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
