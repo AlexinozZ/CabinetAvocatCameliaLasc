@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           </div>
           
           {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-8 relative">
+          <div className="flex flex-col sm:flex-row gap-4 pt-8">
             <button 
               onClick={onOpenConsultationModal}
               className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
@@ -57,19 +57,21 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
               </span>
             </button>
             
-            <button 
-              onClick={scrollToAbout}
-              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 relative"
-            >
-              Află Mai Multe
+            <div className="relative">
+              <button 
+                onClick={scrollToAbout}
+                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              >
+                Află Mai Multe
+              </button>
               
-              {/* Scroll Indicator attached to this button */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-8 sm:mt-12">
+              {/* Scroll Indicator attached directly to this button */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4">
                 <div className="w-6 h-10 border-2 border-yellow-400/50 rounded-full flex justify-center">
                   <div className="w-1 h-3 bg-yellow-400 rounded-full mt-2 animate-bounce"></div>
                 </div>
               </div>
-            </button>
+            </div>
           </div>
         </div>
       </div>
