@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           {/* Main Logo */}
           <div className="mb-6">
             <img 
-              src="/logo-transparent.svg" 
+              src="/logo-gradient.svg" 
               alt="Cabinet Avocat Lasc Camelia Irina Logo" 
               className="w-64 h-64 sm:w-80 sm:h-80 object-contain"
             />
