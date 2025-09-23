@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                 <img 
-                  src="/Logo2.jpeg" 
+                  src="/Logo3.png" 
                   alt="Cabinet Avocat Lasc Camelia Irina Logo" 
                   className="w-10 h-10 object-contain rounded-lg"
                 />
