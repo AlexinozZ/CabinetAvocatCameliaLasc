@@ -22,6 +22,14 @@ const Testimonials: React.FC<TestimonialsProps> = ({ id }) => {
   const fetchTestimonials = async () => {
     try {
       setLoading(true);
+      
+      // Check if Supabase is properly configured
+      if (!supabaseUrl || !supabaseAnonKey) {
+        console.warn('Supabase not configured, using fallback testimonials');
+        setTestimonials([]);
+        return;
+      }
+      
       const { data, error } = await supabase
         .from('reviews')
         .select('*')
@@ -35,7 +43,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ id }) => {
       setTestimonials(data || []);
     } catch (err) {
       console.error('Error fetching testimonials:', err);
-      setError('Nu am putut încărca mărturiile clienților.');
+      // Don't show error, just use empty testimonials
+      setTestimonials([]);
     } finally {
       setLoading(false);
     }
