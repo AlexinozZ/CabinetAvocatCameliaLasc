@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
           alt="Cabinet Background" 
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-black/70 to-gray-800/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-black/20 to-gray-800/30"></div>
       </div>
       
       {/* Background Pattern */}
