@@ -27,15 +27,15 @@ const About: React.FC<AboutProps> = ({ id }) => {
           </div>
           
           {/* Content */}
-          <div className="space-y-8 text-right">
+          <div className="space-y-8">
             <div>
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-4">
                 Despre <span className="text-yellow-600">avocat</span>
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full ml-auto"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
             </div>
             
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-gray-600 leading-relaxed text-justify">
               <p className="text-lg">
                 <strong className="text-gray-900">Lasc Camelia Irina</strong> aduce peste două decenii de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
               </p>
