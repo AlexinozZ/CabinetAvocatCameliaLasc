@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg font-serif font-bold text-gray-900">
-                Camelia Lasc <span className="text-yellow-600">|</span> Cabinet Avocat
+                <span className="text-black">Camelia Lasc</span> <span className="text-yellow-600">|</span> <span className="text-black">Cabinet Avocat</span>
               </h1>
             </div>
           </div>
