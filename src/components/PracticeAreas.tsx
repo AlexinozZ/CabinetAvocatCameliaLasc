@@ -65,15 +65,15 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
         </div>
         
         {/* Practice Areas Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {practiceAreas.map((area, index) => {
             const IconComponent = area.icon;
             
-            // Position "Contracte și Creanțe" on the right side of the last row
+            // Position "Contracte și Creanțe" in the center of the last row
             if (area.title === 'Contracte și Creanțe') {
               return (
                 <div 
-                  className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center lg:col-start-3"
+                  className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center lg:col-start-2 lg:col-span-1"
                   key={index}
                 >
                   {/* Icon */}
