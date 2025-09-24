@@ -31,7 +31,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow-md flex items-center justify-center p-1">
+            <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-md flex items-center justify-center p-0.5">
               <img 
                 src="/Logo_Final7 copy copy.png" 
                 alt="Lasc Camelia Irina Logo" 
