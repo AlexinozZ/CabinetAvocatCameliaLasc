@@ -80,7 +80,6 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-lg font-serif font-bold text-gray-900 group-hover:text-yellow-600 transition-colors duration-300 text-center leading-tight">
                 <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-yellow-600 transition-colors duration-300 text-center leading-tight">
                   {area.title}
                 </h3>
@@ -88,11 +87,7 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
             );
           })}
         </div>
-            )
       </div>
-    }
-    )
-    }
     </section>
   );
 };
