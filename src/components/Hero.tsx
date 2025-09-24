@@ -32,8 +32,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-16">
-        <div className="flex flex-col items-center text-center space-y-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center text-center space-y-8 py-16">
           {/* Main Logo */}
           <div className="mb-4 sm:mb-6">
             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-2xl mx-auto">
