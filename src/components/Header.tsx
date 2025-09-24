@@ -33,7 +33,7 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
               <img 
-                src="/Logo_Final7.png" 
+                src="/Logo_Final7 copy copy.png" 
                 alt="Lasc Camelia Irina Logo" 
                 className="w-8 h-8 object-contain rounded-full"
               />
