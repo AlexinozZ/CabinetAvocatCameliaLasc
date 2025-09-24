@@ -36,11 +36,13 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Main Logo */}
           <div className="mb-4 sm:mb-6">
-            <img 
-              src="/Logo_Final7 copy copy.png" 
-              alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain mx-auto max-w-full rounded-full"
-            />
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-white shadow-2xl mx-auto p-2">
+              <img 
+                src="/Logo_Final7 copy copy.png" 
+                alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
           </div>
           
           {/* Description */}

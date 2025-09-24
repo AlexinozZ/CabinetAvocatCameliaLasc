@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-white rounded-full overflow-hidden shadow-lg flex items-center justify-center p-1">
                 <img 
                   src="/Logo_Final7 copy copy.png" 
                   alt="Cabinet Avocat Lasc Camelia Irina Logo" 
-                  className="w-10 h-10 object-contain rounded-lg"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>
