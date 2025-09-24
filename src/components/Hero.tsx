@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
               <img 
                 src="/Logo_Final7 copy copy.png" 
                 alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-contain object-center rounded-full"
               />
             </div>
           </div>
