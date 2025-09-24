@@ -88,7 +88,11 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
             );
           })}
         </div>
+            )
       </div>
+    }
+    )
+    }
     </section>
   );
 };
