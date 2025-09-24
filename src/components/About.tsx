@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
             
             <div className="space-y-6 text-gray-600 leading-relaxed text-justify">
               <p className="text-lg">
-                <strong className="text-gray-900">Lasc Camelia Irina</strong> aduce peste două decenii de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
+                <strong className="text-gray-900">Avocat Lasc Camelia Irina</strong> aduce peste două decenii de expertiză juridică dedicată pentru a servi clienții din România cu un angajament neclintit față de justiție și excelență profesională.
               </p>
               
               <p>

@@ -65,42 +65,22 @@ const PracticeAreas: React.FC<PracticeAreasProps> = ({ id }) => {
         </div>
         
         {/* Practice Areas Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {practiceAreas.map((area, index) => {
             const IconComponent = area.icon;
             
-            // Position "Contracte și Creanțe" in the center of the last row
-            if (area.title === 'Contracte și Creanțe') {
-              return (
-                <div 
-                  className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center lg:col-start-2 lg:col-span-1"
-                  key={index}
-                >
-                  {/* Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  {/* Content */}
-                  <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
-                    {area.title}
-                  </h3>
-                </div>
-              );
-            }
-            
             return (
               <div 
-                className="group bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center"
+                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center h-40 flex flex-col justify-center"
                 key={index}
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto">
-                  <IconComponent className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 mx-auto">
+                  <IconComponent className="w-6 h-6 text-white" />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors duration-300 text-center">
+                <h3 className="text-lg font-serif font-bold text-gray-900 group-hover:text-yellow-600 transition-colors duration-300 text-center leading-tight">
                   {area.title}
                 </h3>
               </div>
