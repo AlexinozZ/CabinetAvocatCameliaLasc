@@ -46,8 +46,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultationModal, id }
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Angajamentul nostru față de excelență, combinat cu atenția personalizată și rezultatele dovedite, 
-            ne face alegerea de încredere pentru reprezentarea juridică în România.
+            Angajamentul nostru față de excelență și sprijinul dedicat fiecărui client, alături de experiența dovedită, ne fac alegerea de încredere pentru reprezentarea juridică în România.
           </p>
         </div>
         
