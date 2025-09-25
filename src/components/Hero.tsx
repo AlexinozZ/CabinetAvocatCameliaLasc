@@ -42,7 +42,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
                 alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
                 className="w-full h-full object-cover object-center"
               />
-              />
             </div>
           </div>
           
