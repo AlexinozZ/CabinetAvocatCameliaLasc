@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full overflow-hidden shadow-lg flex items-center justify-center p-0.5">
                 <img 
                   src="/Logo_Final7 copy copy.png" 
-                  alt="Cabinet Avocat Lasc Camelia Irina Logo" 
+                  alt="Cabinet Avocat Lasc Camelia Irina - Logo Footer" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>

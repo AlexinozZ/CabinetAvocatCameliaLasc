@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="/Fundal copy.jpeg"
-                alt="Cabinet Avocat Lasc Camelia Irina - Interior Elegant"
+                alt="Cabinet Avocat Lasc Camelia Irina Timișoara - Interior Elegant Birou Avocatură"
                 className="w-full h-96 sm:h-[500px] object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

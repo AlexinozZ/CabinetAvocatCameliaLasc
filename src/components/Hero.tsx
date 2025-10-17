@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenConsultationModal }) => {
             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full shadow-2xl mx-auto overflow-hidden">
               <img 
                 src="/Logo_Final77.png" 
-                alt="Cabinet Avocat Lasc Camelia Irina - Logo Principal" 
+                alt="Avocat Lasc Camelia Irina - Cabinet de Avocatură Timișoara - Logo Oficial" 
                 className="w-full h-full object-cover object-center"
               />
             </div>
