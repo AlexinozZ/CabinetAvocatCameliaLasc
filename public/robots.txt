@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://avocatlasc.ro/sitemap.xml
+
+# Disallow admin areas (if any in future)
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow all important pages
+Allow: /
+Allow: /#about
+Allow: /#practice-areas
+Allow: /#why-choose-us
+Allow: /#testimonials
+Allow: /#contact

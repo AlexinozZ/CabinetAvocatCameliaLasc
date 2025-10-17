@@ -1,0 +1,6 @@
+# Netlify redirects file
+# Redirect www to non-www
+https://www.avocatlasc.ro/* https://avocatlasc.ro/:splat 301!
+
+# Handle SPA routing
+/*    /index.html   200
